@@ -1,27 +1,38 @@
 const TEXTS = ['Declarative', 'Component-Based', 'Learn Once, Write Anywhere']
 
-const firstElement = React.createElement(
-    'div',
-    {},
-    [
-        React.createElement(
-            'h1',
-            {},
-            'Hello React'
-        ),
-        React.createElement(
-            'ul',
-            {},
-            TEXTS.map((text) => {
-                return React.createElement(
-                    'li',
-                    {},
-                    text
-                )
-            })
-        ),
-    ]
+const firstElement = (
+    <div>
+        <h1>Hello React</h1>
+        <ul>
+            <li>{TEXTS[0]}</li>
+            <li>{TEXTS[1]}</li>
+            <li>{TEXTS[2]}</li>
+        </ul>
+    </div>
 )
+
+// React.createElement(
+//     'div',
+//     {},
+//     [
+//         React.createElement(
+//             'h1',
+//             {},
+//             'Hello React'
+//         ),
+//         React.createElement(
+//             'ul',
+//             {},
+//             TEXTS.map((text) => {
+//                 return React.createElement(
+//                     'li',
+//                     {},
+//                     text
+//                 )
+//             })
+//         ),
+//     ]
+// )
 
 ReactDOM.render(
     firstElement,
