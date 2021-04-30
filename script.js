@@ -12,23 +12,13 @@ const firstElement = React.createElement(
         React.createElement(
             'ul',
             {},
-            [
-                React.createElement(
+            TEXTS.map((text) => {
+                return React.createElement(
                     'li',
                     {},
-                    TEXTS[0]
-                ),
-                React.createElement(
-                    'li',
-                    {},
-                    TEXTS[1]
-                ),
-                React.createElement(
-                    'li',
-                    {},
-                    TEXTS[2]    
+                    text
                 )
-            ]
+            })
         ),
     ]
 )
